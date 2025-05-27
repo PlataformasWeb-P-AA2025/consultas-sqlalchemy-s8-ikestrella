@@ -26,5 +26,3 @@ entregas = session.query(Entrega).join(Tarea).join(Estudiante).join(Curso).join(
 for e in entregas:
     print(f"Nombre Tarea: {e.tarea.titulo} - Nombre Estudiante: {e.estudiante.nombre} - Calificacion: {e.calificacion} - Nombre Instructor: {e.tarea.curso.instructor.nombre} - Nombre Curso: {e.tarea.curso.departamento.nombre}")
     print()
-
-# - Calificacion: {e[0].calificacion} - Nombre Instructor: {e[3].nombre} - Departamento: {e[4].nombre}
